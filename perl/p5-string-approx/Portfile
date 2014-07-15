@@ -1,0 +1,16 @@
+# $Id$
+
+PortSystem          1.0
+PortGroup           perl5 1.0
+
+perl5.branches      5.8 5.10 5.12 5.14 5.16 5.18
+perl5.setup         String-Approx 3.27
+maintainers	        zdw
+description         Perl extension for approximate matching (fuzzy matching) 
+long_description    ${description}
+
+checksums	        md5 3cade9960a9af1943d6f50b2f1a0e903 \
+                    sha1 51543a2c0a540588aebf35bd7ba414fb9be6d464 \
+                    rmd160 550206f11bfec7af2dfad693614d009984cf0a07
+
+platforms           darwin

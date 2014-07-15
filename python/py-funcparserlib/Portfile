@@ -1,0 +1,24 @@
+# $Id$
+
+PortSystem          1.0
+PortGroup           python 1.0
+
+name                py-funcparserlib
+version             0.3.5
+categories-append   replaceme
+platforms           darwin
+license             replaceme
+maintainers         replaceme
+description         replaceme
+long_description \
+   replaceme
+
+homepage            replaceme
+master_sites        http://pypi.python.org/packages/source/f/funcparserlib/
+distname            funcparserlib-${version}
+
+checksums           md5 52dfec49f2d2c4d816fe8d8c90f7dcf1
+                    
+python.versions      25 26 27
+python.default_version 27
+

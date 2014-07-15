@@ -1,0 +1,24 @@
+# $Id
+
+PortSystem 1.0
+PortGroup python 1.0
+
+name	py-caldav
+version	0.1.10
+python.versions	25 26 27
+python.default_version 	27
+categories	python
+platforms	darwin
+license		GPL Apache
+maintainers	zdw
+description	CalDAV client library for Python
+homepage	https://bitbucket.org/cyrilrbt/caldav
+description	This project is a CalDAV (RFC4791) client library for Python.
+checksums	md5 2bd11debe2c9d034c15deec3ab0ea141
+
+master_sites	http://pypi.python.org/packages/source/c/caldav/ 
+distname	caldav-${version}	
+
+depends_lib	port:py-vobject
+
+

@@ -1,0 +1,15 @@
+# $Id$
+
+PortSystem          1.0
+PortGroup           perl5 1.0
+
+perl5.branches      5.8 5.10 5.12 5.14 5.16 5.18
+perl5.setup         AI-Categorizer 0.09
+maintainers	    zdw@artisancomputer.com
+description         Automatic Text Categorization
+long_description    ${description}
+
+checksums	    md5 a35d5af19ae0d9ddd0a800b7172a0750 \
+                sha1 b6b1a8b7a7809636287ff34b5eea19f8d7321fb7
+
+platforms           darwin
