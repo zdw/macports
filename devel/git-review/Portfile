@@ -1,19 +1,21 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
 # $Id$
 
 PortSystem          1.0
 PortGroup           python 1.0
 
-name                py-git-review
+name                git-review
 version             1.25.0
+categories          devel
 platforms           darwin
-license             Apache
-maintainers         Zack Williams <zdw@...>
+license             Apache-2
+maintainers         artisancomputer.com:zdw
 description         A git command for submitting branches to Gerrit
 long_description \
    git-review is a tool that helps submitting git branches to gerrit for review.
-
 homepage            https://git.openstack.org/cgit/openstack-infra/git-review
 master_sites        https://pypi.python.org/packages/source/g/git-review/
+
 distname            git-review-${version}
 
 checksums           sha256 087e0a7dc2415796a9f21c484a6f652c5410e6ba4562c36291c5399f9395a11d
@@ -21,4 +23,6 @@ checksums           sha256 087e0a7dc2415796a9f21c484a6f652c5410e6ba4562c36291c53
 python.versions     27
 python.link_binaries_suffix
 
-depends_lib-append  port:py-requests
+depends_lib         port:py-requests \
+                    port:git
+

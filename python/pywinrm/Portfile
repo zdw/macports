@@ -1,0 +1,25 @@
+# $Id$
+
+PortSystem          1.0
+PortGroup           github 1.0
+PortGroup           python 1.0
+
+github.setup        diyan pywinrm 0.2.0 v
+name                pywinrm
+version             0.2.0
+platforms           darwin
+license             MIT
+maintainers         replaceme
+description         replaceme
+long_description \
+   replaceme
+
+homepage            http://github.com/diyan/pywinrm/
+
+python.versions     27
+python.default_version 27
+
+checksums           sha256  a7df41b5040391f8e3cbf45db915196b38d7037e3c85b98bbd77ab282c5bb4a9
+
+
+# need deps
