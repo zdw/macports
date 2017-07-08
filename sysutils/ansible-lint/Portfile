@@ -1,14 +1,13 @@
 # -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
-# $Id$
 
 PortSystem          1.0
 PortGroup           python 1.0
 
 name                ansible-lint
 version             3.4.13
-categories          python
+categories          sysutils
 platforms           darwin
-license             Apache
+license             MIT
 maintainers         artisancomputer.com:zdw
 description         Best practices checker for Ansible playbooks
 long_description \
@@ -19,6 +18,9 @@ master_sites        https://pypi.python.org/packages/34/21/0accae0dbc42aef2ec433
 distname            ansible-lint-${version}
 
 checksums           sha256 79df7b490747049c857d47b44a39465ca909860dab0909df0ce48cd4333cf7e4
+
+depends_run         port:ansible
+
 python.versions     27
 
 python.default_version 27
