@@ -2,27 +2,29 @@
 
 PortSystem          1.0
 PortGroup           python 1.0
+PortGroup           github 1.0
 
+
+github.setup        willthames ansible-lint v3.4.13
 name                ansible-lint
-version             3.4.13
-categories          sysutils
+categories-append   sysutils
 platforms           darwin
+supported_archs     noarch
 license             MIT
-maintainers         artisancomputer.com:zdw
+maintainers         artisancomputer.com:zdw \
+                    openmaintainer
 description         Best practices checker for Ansible playbooks
 long_description \
     ansible-lint checks playbooks for practices and behaviour that could potentially be improved
 
-homepage            https://github.com/willthames/ansible-lint
-master_sites        https://pypi.python.org/packages/34/21/0accae0dbc42aef2ec433b0bdaa5d21774939667b45690f5d4a4619b4528/
-distname            ansible-lint-${version}
+checksums           sha256 b6b0e9f87ffe8912a63b1a4189738ba24adb6ec4226a64852523a3bd4db690aa \
+                    rmd160 32a39b6f2809903e8d25fcbfb403230278387504
 
-checksums           sha256 79df7b490747049c857d47b44a39465ca909860dab0909df0ce48cd4333cf7e4
-
-depends_run         port:ansible
+depends_run-append  port:ansible
 
 python.versions     27
 
 python.default_version 27
 python.link_binaries_suffix
 
+livecheck.regex     archive/[join ${github.tag_prefix} ""](\[^"r-\]+)${extract.suffix}
