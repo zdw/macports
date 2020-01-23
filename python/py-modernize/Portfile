@@ -1,0 +1,29 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           python 1.0
+PortGroup           github 1.0
+
+github.setup        python-modernize python-modernize 0.5
+github.tarball_from releases
+name                py-modernize
+version             0.5
+categories          python
+platforms           darwin
+license             BSD3
+maintainers         artisancomputer.com:zdw
+description         Utility for porting code from Python 2 to 3
+long_description \
+   A very thin wrapper around lib2to3 to utilize it to make Python 2 code more modern with the intention of eventually porting it over to Python 3.
+
+homepage            https://github.com/python-modernize/python-modernize
+
+checksums           sha256 9ed94b6db34344f8463cfbad4b47a8aaab3d318fd0356d0016d07b4a1fc1f824
+
+python.versions     27
+python.default_version 27
+
+python.link_binaries_suffix
+
+

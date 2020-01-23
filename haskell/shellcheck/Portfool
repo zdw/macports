@@ -1,0 +1,27 @@
+PortSystem          1.0
+PortGroup           haskell 1.0
+
+haskell.setup       ShellCheck 0.4.7
+name                shellcheck
+checksums           rmd160  17ed531070ac7e98a3b3a5b7e58dc1a90b30fb71 \
+                    sha256  184955264d42c5dca0300fb9688b9a6c9a1c70c345dbcd8e30bb48a049a70d7c
+
+license             GPL-3+
+maintainers         cal openmaintainer
+platforms           darwin
+homepage            https://github.com/koalaman/shellcheck
+
+# needs hs-quickcheck >= 2.7.4
+depends_lib-append  port:hs-json \
+                    port:hs-mtl-2.2 \
+                    port:hs-parsec \
+                    port:hs-quickcheck-devel \
+                    port:hs-regex-tdfa
+
+description         ShellCheck, a static analysis tool for shell scripts
+long_description    \
+    The goals of ShellCheck are: \
+    \n - To point out and clarify typical beginner's syntax issues, that causes a shell to give cryptic error messages. \
+    \n - To point out and clarify typical intermediate level semantic problems, that causes a shell to behave strangely and counter-intuitively. \
+    \n - To point out subtle caveats, corner cases and pitfalls, that may cause an advanced user's otherwise working script to fail under future circumstances.
+

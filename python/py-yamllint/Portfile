@@ -1,0 +1,30 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           python 1.0
+
+name                yamllint
+version             1.10.0
+categories          python
+platforms           darwin
+license             MIT
+maintainers         artisancomputer.com:zdw
+description         YAML lint checker
+long_description \
+    yamllint does not only check for syntax validity, but for weirdnesses like key repetition and cosmetic problems such as lines length, trailing spaces, indentation, etc.
+
+homepage            https://github.com/adrienverge/yamllint
+master_sites        https://pypi.python.org/packages/47/b9/512bbd1b8ee92196548d56eba7ca1242f5eb14255fa44f772399abdb9bde/
+distname            yamllint-${version}
+
+checksums           sha256 056d634bba39e34cb367a810af6abd534d5b97b0bdd9f8f116616bf26ef379b3 \
+                    rmd160 683912e1398c283a1e32d4941b3e725ceb85e8e8
+
+python.versions     27
+python.default_version 27
+
+depends_run         port:py-pathspec
+
+python.link_binaries_suffix
+

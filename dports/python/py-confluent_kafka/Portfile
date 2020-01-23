@@ -1,0 +1,32 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+PortGroup           python 1.0
+
+name                py-confluent-kafka
+version             0.11.5
+platforms           darwin
+license             NULL
+maintainers         nomaintainer
+
+description         Confluent s Apache Kafka client for Python
+long_description    ${description}
+
+homepage            https://github.com/confluentinc/confluent-kafka-python
+master_sites        pypi:c/confluent-kafka
+distname            confluent-kafka-${version}
+
+checksums           rmd160  a34e92bce79f5a9ead0b58864b4bef706b96dd67 \
+                    sha256  bfb5807bfb5effd74f2cfe65e4e3e8564a9e72b25e099f655d8ad0d362a63b9f \
+                    size    77650
+
+python.versions     27 36
+
+if {${name} ne ${subport}} {
+    depends_build-append \
+                        port:py${python.version}-setuptools
+
+    livecheck.type      none
+} else {
+    livecheck.type      pypi
+}

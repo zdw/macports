@@ -1,0 +1,27 @@
+PortSystem 1.0
+PortGroup  ruby 1.0
+PortGroup  github 1.0
+
+github.setup        chef mixlib-cli 1_7_0 REL_
+version             [string map {_ .} ${github.version}]
+ruby.setup          mixlib-cli ${version} gem {} rubygems
+name                rb-mixlib-cli
+
+categories-append   sysutils
+
+platforms           darwin
+
+supported_archs     noarch
+
+license             Apache-2
+maintainers         artisancomputer.com:zdw \
+                    openmaintainer
+description         ruby mixin for cli parsing
+long_description \
+    A mixin for creating command line applications - gives an easy DSL for argument specification and processing
+
+
+checksums           sha256  973156335bb0ddb45f470b0b51658d70e778ad364f9c6a9cfff4dc79a0ae8718 \
+                    rmd160  c4071a9fb8d7133ccee7e3ecd1b87bee5f78b180
+
+

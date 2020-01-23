@@ -1,0 +1,24 @@
+# $Id$
+
+PortSystem          1.0
+PortGroup           python 1.0
+
+name                py-vim_bridge
+version             0.5
+categories-append   replaceme
+platforms           darwin
+license             replaceme
+maintainers         replaceme
+description         replaceme
+long_description \
+   replaceme
+
+homepage            replaceme
+master_sites        pypi:v/vim_bridge
+distname            vim_bridge-${version}
+
+checksums           sha256 d2cd47ac8e6b052add7b51b2a964e46c6f7696018545c2bf0ad8a3fb16b431e4
+
+python.versions      27
+python.default_version 27
+

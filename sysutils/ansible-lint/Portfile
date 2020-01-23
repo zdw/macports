@@ -5,7 +5,7 @@ PortGroup           python 1.0
 PortGroup           github 1.0
 
 
-github.setup        willthames ansible-lint v3.4.13
+github.setup        willthames ansible-lint v3.4.20
 name                ansible-lint
 categories-append   sysutils
 platforms           darwin
@@ -17,10 +17,10 @@ description         Best practices checker for Ansible playbooks
 long_description \
     ansible-lint checks playbooks for practices and behaviour that could potentially be improved
 
-checksums           sha256 b6b0e9f87ffe8912a63b1a4189738ba24adb6ec4226a64852523a3bd4db690aa \
-                    rmd160 32a39b6f2809903e8d25fcbfb403230278387504
+checksums           sha256 5056f86e9a78aff9d91ce7414b9f8089d08b609824df2d588ac0182ab387bcb6 \
+                    rmd160 828c234bc5ccc56e3178c59f475879f6bc4298ad
 
-depends_run-append  port:ansible
+depends_run-append  port:py27-ansible
 
 python.versions     27
 

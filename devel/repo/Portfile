@@ -9,7 +9,7 @@ platforms           darwin
 maintainers         nomaintainer
 supported_archs     noarch
 
-description         tool that helps to manage Android Git repositories 
+description         tool that helps to manage Android Git repositories
 long_description    \
             Repo is a tool that we built on top of Git. Repo helps us \
             manage the many Git repositories, does the uploads to our \
@@ -24,7 +24,7 @@ checksums           sha256  e147f0392686c40cfd7d5e6f332c6ee74c4eab4d24e2694b3b0a
                     rmd160  20308ab7a6ea6d7c9666af5ff9f393f1a768c7f9
 
 depends_run         port:git
-extract.suffix      
+extract.suffix
 extract.only
 use_configure       no
 build               { }

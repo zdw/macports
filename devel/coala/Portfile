@@ -1,0 +1,28 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+PortGroup           python 1.0
+PortGroup           github 1.0
+
+github.setup        coala coala v0.11.0
+name                coala
+categories-append   devel
+platforms           darwin
+supported_archs     noarch
+license             AGPL3
+maintainers         openmaintainer
+description         linting and fixing code for all languages
+long_description \
+    coala provides a unified command-line interface for linting and fixing all your code, regardless of the programming languages you use
+
+checksums           sha256 ad534bb80a91ca4dfe117b6160e9c13a45bd9ed23fc15d19069d7f0f651a44c5 \
+                    rmd160 e2939df65034d302ec768f150b931b2c5d2cdc70
+
+depends_run-append  port:coala-bears
+
+python.versions     34 35
+
+python.default_version 34
+python.link_binaries_suffix
+
+livecheck.regex     archive/[join ${github.tag_prefix} ""](\[^"r-\]+)${extract.suffix}

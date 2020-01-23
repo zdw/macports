@@ -1,0 +1,26 @@
+PortSystem          1.0
+PortGroup           ruby 1.0
+PortGroup           github 1.0
+
+github.setup        markdownlint markdownlint 0_4_0 REL_
+version             [string map {_ .} ${github.version}]
+ruby.setup          mdl ${version} gem {} rubygems
+
+name                markdownlint
+categories-append   sysutils
+platforms           darwin
+supported_archs     noarch
+
+license             MIT
+maintainers         artisancomputer.com:zdw \
+                    openmaintainer
+description         Markdown lint tool
+long_description \
+    A tool to check markdown files and flag style issues
+
+checksums           sha256  e2de244a72ac4e90bd9045582fe7cfed84b436342a127dd6a5fb9c2b016fa637 \
+                    rmd160  da5db70b68786d36374b200b00fcbae396cdc364
+
+depends_run-append    port:rb-kramdown port:rb-mixlib-cli port:rb-mixlib-config
+
+ruby.link_binaries

@@ -1,0 +1,26 @@
+PortSystem  1.0
+PortGroup   ruby 1.0
+PortGroup   github 1.0
+
+github.setup        chef mixlib-config 2_2_4 REL_
+version             [string map {_ .} ${github.version}]
+ruby.setup          mixlib-config ${version} gem {} rubygems
+name                rb-mixlib-config
+
+categories-append   sysutils
+
+platforms           darwin
+
+supported_archs     noarch
+
+license             Apache-2
+maintainers         artisancomputer.com:zdw \
+                    openmaintainer
+
+description         ruby mixin for class-based config
+long_description \
+    A simple class-based Config mechanism
+
+checksums           sha256 5c90f95d03687f78ec80dd895f656173dd2a5e60c5c195917d21a7f2a5794a68 \
+                    rmd160 ad32ce5384da25735eff0aa7b25aae4c1782fbad
+
